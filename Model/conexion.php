@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
 * 
@@ -18,7 +18,6 @@ class Conexion
 			$this->usuario	  = "root";
 			$this->contraseña = "root";
 			$this->basedatos  = "Porciweb";
-		  
 	}
 
 

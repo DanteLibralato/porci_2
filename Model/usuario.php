@@ -8,7 +8,7 @@ class Usuario
 
 	
 	private $conexion;
-	
+	 
 	public  function __construct()
 	{
 		require_once('conexion.php');
@@ -45,12 +45,12 @@ class Usuario
 		var_dump($resultado);
 		return $resultado;*/
 		//$this->conexion->cerrar();
-		$sql = "select * from Usuarios where Nombre='hebert'  AND  Pass='123' ";
+		$sql = "select * from Usuarios where Nombre='" . $username . "'  AND  Pass='" . $password . "' ";
 		$re = $this->conexion->conexion->query($sql);
 		$filas = $re->num_rows;
 		if(!empty($filas)){
-			echo $filas;
-		    //var_dump($re->fetch_array());
+				//--echo $filas;
+				var_dump($re->fetch_array());
 			}
 			else{
 			    var_dump('No existen filas.');
